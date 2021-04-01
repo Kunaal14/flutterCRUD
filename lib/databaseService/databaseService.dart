@@ -30,8 +30,8 @@ class DatabaseService extends ChangeNotifier {
     print(id);
   }
 
-  List<Contact> fetchContact() {
-    List<Contact> x = _dbHelper.fetchContacts() as List<Contact>;
+  Future<List<Contact>> fetchContact() async {
+    List<Contact> x = await _dbHelper.fetchContacts();
     return x;
   }
 }

@@ -114,8 +114,8 @@ class _MyHomePageState extends State<MyHomePage> {
       );
 
   _refreshContactList() async {
-    //List<Contact> x = await _dbHelper.fetchContacts();
-    List<Contact> x = await _databaseService.fetchContact();
+    List<Contact> x = await _dbHelper.fetchContacts();
+    //List<Contact> x = await _databaseService.fetchContact();
 
     setState(() {
       _contacts = x;
